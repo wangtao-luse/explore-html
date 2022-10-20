@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+<!--
+display: grid | inline-grid;
+grid-template：
+grid-template-columns 属性 和 grid-template-rows 属性,
+用来指定网格的列宽以及行高，以空格分隔。
+1.设为网格容器时，网格项的 float、display: inline-block、
+display: table-cell、vertical-align 和 column-* 等设置都将失效。
+2.fr (单位): 剩余空间分配数。用于在一系列长度值中分配剩余空间，如果多个已指定了多个部分，则剩下的空间根据各自的数字按比例分配。
+相关博客：
+https://blog.csdn.net/weixin_51264427/article/details/119645818
+https://blog.csdn.net/weixin_34109083/article/details/113075631
+-->
+	</head>
+	<body>
+<style>
+	.wrapper{
+		display: grid;
+		grid-template-columns:auto 1fr;
+	}
+	.wrapper1{
+		display: grid;
+		grid-template-columns: 1fr auto;
+	}
+	.wrap-box{
+		height: 280px;
+		background-color: #008000;
+	}
+	.aside-box{
+		height: 280px;
+		background-color: #E1251B;
+	}
+</style>
+		<div class="wrapper">
+			<div class="main-wrap">
+				<div class="wrap-box">content</div>
+			</div>
+			<div class="aside-wrap">
+				<div class="aside-box">aside</div>
+			</div>
+		</div>
+		<h2></h2>
+		<div class="wrapper1">
+			<div class="main-wrap">
+				<div class="wrap-box">content1</div>
+			</div>
+			<div class="aside-wrap">
+				<div class="aside-box">aside2</div>
+			</div>
+		</div>
+	</body>
+</html>

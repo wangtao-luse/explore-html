@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>一列布局</title>
+	</head>
+	<body>
+<!--
+特点：
+1.页面内容区域有一个固定宽度。
+2.页面内容区域在浏览器窗口中自动适应居中。
+ 实现方式：
+   box{widht:自定义；margin 0 auto}
+      固定宽度设置
+   1.以主流的分辨率来判断
+-->
+<style>
+	.main{
+		width: 1000px;
+		margin: 0 auto;		
+	}
+	.content{
+		width: 100%;
+		height: 700px;
+		border: 1px solid #4e6ef2;
+	}
+</style>
+<div class="wrapper">
+	<div class="main">
+		<div class="content">
+			主题内容
+		</div>
+	</div>
+</div>
+	</body>
+</html>

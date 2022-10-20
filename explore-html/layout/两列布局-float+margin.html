@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>二列布局-float+margin-left</title>
+	</head>
+	<body>
+<!--
+1.二列布局（1列固定宽度，1列自动适应宽）
+  a.固定宽度的列：通常称为边栏 主要放置一些固定的内容如导航、菜单之类；
+  b.自适应宽的列：根据浏览器窗口的大小自动判断宽度，主要放置主体内容；
+
+2应用：后台管理；用户中心；博客；
+
+3.实现办法1(float+margin-left)
+   a.固定容器{width：固定数值;float:left/right}
+   b.自适应容器{margin-方向：数值=固定列宽;}//不能设置宽
+  更多方式：
+https://blog.csdn.net/weixin_46163658/article/details/122215930	
+-->
+<style>
+.container{}
+.blog_container_aside{
+	width: 300px;
+	float: left;
+}
+	.aside-box{
+		height: 500px;
+		background-color: #FC5531;
+	}
+.main{
+	margin-left: 310px;
+}
+	.blog-content-box{
+		height: 800px;
+		background-color: #4E6EF2;
+	}
+</style>
+<div class="container">
+	<div class="blog_container_aside">
+		<div class="aside-box">
+			固定容器
+		</div>
+	</div>
+	<div class="main">
+		<div class="blog-content-box">
+			自适应容器
+		</div>
+	</div>
+</div>
+	</body>
+</html>

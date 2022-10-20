@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+<!--
+三列布局
+ 1.中间宽度自适应，两边定宽;
+ 2.中间列放置主体内容，在浏览器中优先展示渲染；
+ 原理
+ 当子元素处于浮动状态时，设置负margin>=子元素宽度时，子元素会叠盖到兄弟元素之上；
+-->
+<style>
+body{
+	background-color: #f4f4f4;
+}
+.container{
+	
+}
+.fs-col1{
+	float: left;
+	width:100%
+}
+	.category{
+		background-color: #e1251b;
+		height: 480px;
+	}
+.fs-col2{
+	float: left;
+	width: 190px;
+	margin-left: -100%;
+}
+	.focus{
+		background-color: #363634;
+		height: 480px;
+	}
+.fs-col3{
+	float: left;
+	width: 190px;
+	margin-left: -190px;
+}
+	.user{
+		background-color: #e5d790;
+		height: 480px;
+	}
+</style>
+<div class="container">
+	<div class="fs-col1">
+		<div class="category">col1</div>
+	</div>
+	<div class="fs-col2">
+		<div class="focus">col2</div>
+	</div>
+	<div class="fs-col3">
+		<div class="user">col3</div>
+	</div>
+</div>
+	</body>
+</html>
