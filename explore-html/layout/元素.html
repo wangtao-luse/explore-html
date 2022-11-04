@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<!--
+    	
+    
+	1.HTML中元素的分类
+	  HTML中的元素可分为三大类:
+		 a.块级元素(块状元素)
+		 b.内联元素(行级元素)(行间元素)
+		 c.内联块级元素(行内块级元素)(行间-块状元素)
+	
+	2.块级元素(block)：
+	  1.一个块级元素独占一行(该元素前后的其他内容都要换行);
+	  2.直接适合盒子模型的所有的css属性(padding,margin,border...);
+	
+	3.行级元素(inline)：
+	   1.和其他元素都在同一行上；
+	   2.宽度由装载的内容决定的,宽度设置无效;
+	   3.由于受到行的限制，高度(height)及上下方向的边距设置无效(padding、margin);
+	   
+	4.行级-块状元素( inline-block)	  
+	   1.本身是inline元素，但视觉表现上是按照block效果呈现,
+	          及可以直接使用于盒子模型属性。
+	   2.典型的例子：<img><input>
+	   3.这类的html元素通常是代表页面中外部引入文件，
+	          或直接定义好的插件;
+	
+	5.元素类型转换
+	     html标签都有自己的默认的display设置,块状元素：默认为block;行间元素默认为：inline;
+	    行间-块状元素默认为inline-block;
+	    语法：display:block|inline|inline-block|none
+	    说明:block:对象呈现为块状元素,为了便于使用css盒模型属性;
+	      inline:对象呈现为行间元素,实现html块状元素和行间元素的互换;
+	      inline-block:对象呈现为行间-块状元素,实现同在一行中的元素能适用盒子模型属性;
+	      none:对象呈现为“无”,实现元素在页面中“消失”
+	  -->
+	  <style>
+	  	.inline{
+	  		height: 300px;
+	  		padding-top: 50px;
+	  		padding-bottom: 30px;
+	  		margin-top: 50px;
+	  		margin-bottom: 20px;
+	  	}
+	  </style>
+	  <div>我是块状元素</div>	  
+	  <span class="inline">我是行间元素,高度(height)及上下方向的边距设置无效(padding、margin)</span>
+	  <input type="button" value="我块状-行间元素" />
+	  <div>我是块状元素</div>	  
+	</body>
+</html>
